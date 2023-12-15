@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import './App.css'; 
 import Textarea from './componed/textarea';
+import Button from '@mui/material/Button';
 
 function BasicTextFields(props) {
   const { countryENG, countryRUS, countryUZB } = props.data;
@@ -21,6 +22,7 @@ function BasicTextFields(props) {
     </Box>
   );
 }
+
 function BasicTextFieldsTwo(props) {
   const { countryENG, countryRUS, countryUZB } = props.data;
   return (
@@ -44,19 +46,19 @@ function App() {
     countryUZB: 'UZB',
     countryRUS: 'RUS',
     countryENG: 'ENG',
-  
   };
 
   return (
     <>
       <div className="container">
         <div className="TranslateInput">
-        <BasicTextFields data={data} />
-             <Textarea></Textarea>          
+          <BasicTextFields data={data} />
+          <Textarea></Textarea>  
+          <Button variant="outlined" sx={{ mt: 2, ml: 3 }}>Translate</Button>
         </div>
         <div className="TranslateOutput">
-        <BasicTextFieldsTwo data={data} />
-            <Textarea ></Textarea>
+          <BasicTextFieldsTwo data={data} />
+          <Textarea ></Textarea>
         </div>
       </div>
     </>
