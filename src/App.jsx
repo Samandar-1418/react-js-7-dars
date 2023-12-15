@@ -49,19 +49,23 @@ function App() {
   };
 
   return (
-    <>
+    <div className='translate-wrapper'>
       <div className="container">
         <div className="TranslateInput">
           <BasicTextFields data={data} />
           <Textarea></Textarea>  
-          <Button variant="outlined" sx={{ mt: 2, ml: 3 }}>Translate</Button>
         </div>
         <div className="TranslateOutput">
           <BasicTextFieldsTwo data={data} />
           <Textarea ></Textarea>
         </div>
       </div>
-    </>
+      <div className="btn-wrapper">
+      <Button variant="outlined" sx={{ mt: 5, ml: 2 }}>Translate</Button>
+
+      </div>
+
+    </div>
   );
 }
 
